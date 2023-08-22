@@ -35,9 +35,7 @@ pub mod solana_twitter {
 }
 
 #[derive(Accounts)]
-<<<<<<< Updated upstream
-pub struct Initialize {}
-=======
+
 pub struct SendTweet<'info> {
     #[account(init, payer = author, space = Tweet::LEN)]
     pub tweet: Account<'info, Tweet>,
@@ -81,4 +79,3 @@ pub enum ErrorCode {
     #[msg("The provided content should be 280 characters long maximum.")]
     ContentTooLong,
 }
->>>>>>> Stashed changes
